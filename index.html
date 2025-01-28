@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Nicolly Mendes Cescon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Profile */
+        .profile-section {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            color: white;
+            border-radius: 15px;
+            margin-top: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 1s ease-out;
+        }
+
+        .profile-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 20px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            transform: scale(1.2);
+            color: #e0e0e0;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            margin-top: 50px;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .github-section {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            opacity: 0;
+            transition: all 0.6s ease-out;
+        }
+
+        .github-section.visible {
+            opacity: 1;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .github-link:hover {
+            background: #444;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .profile-section {
+                margin-top: 10px;
+                padding: 30px 15px;
+            }
+
+            .profile-pic {
+                width: 120px;
+                height: 120px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                margin: 0 10px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Seção do Perfil -->
+        <section class="profile-section">
+            <img src="eu.jpeg" alt="Foto de Perfil" class="profile-pic">
+            <h1>Nicolly Mendes</h1>
+            <p>Desenvolvedor Back-End</p>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/nicolly-mendes-5266192ab/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/nicollymendes04/?next=%2F"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <div class="contact-info">
+                <p>📧 nicollycescon22@gmail.com</p>
+                <p>📱 (65) 99692-5612</p>
+            </div>
+        </section>
+
+        <!-- Seção de Projetos -->
+        <section class="projects-section">
+            <h2>Projetos Recentes</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sistema de Gestão de Estoque</h3>
+                    <p>Sistema de gerenciamento de estoque e vendas desenvolvido em Python com Tkinter para brechós e pequenos negócios.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sistema de Controle de Biblioteca</h3>
+                    <p>Sistema de gerenciamento para bibliotecas com cadastro de livros, usuários, empréstimos e multas usando Python e SQLite.</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Sistema de Controle de Faltas</h3>
+                    <p>Sistema para gerenciamento de faltas escolares com registro de presença, relatórios e backups em Python.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção GitHub -->
+        <div class="github-section">
+            <a href="https://github.com/NicollyMendes" class="github-link" target="_blank">
+                <i class="fab fa-github"></i>
+                Ver Repositórios no GitHub
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Animação ao scroll com Intersection Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Elementos para observar
+        document.querySelectorAll('.profile-section, .project-card, .github-section').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Animação suave para links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
