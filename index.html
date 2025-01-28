@@ -144,6 +144,58 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
+
+/* Ajuste de tamanho dos ícones */
+        .fab, .fas {
+    font-size: 24px; /* Tamanho padrão */
+    }   
+
+/* Cores personalizadas (opcional) */
+        .fa-python { color: #3776AB; }
+            .fa-html5 { color: #E34F26; }
+        .fa-css3-alt { color: #1572B6; }
+        .tech-item:hover .fab {
+        transform: scale(1.2);
+        transition: transform 0.3s ease;
+        }
+        .tech-section {
+    padding: 2rem;
+    background-color: #f8f9fa; /* Cor de fundo opcional */
+}
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Colunas responsivas */
+            gap: 1.5rem; /* Espaço entre os cards */
+            padding: 1rem;
+        }
+
+        .tech-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.2s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px); /* Efeito de hover */
+        }
+
+        .tech-card i {
+            font-size: 2.5rem; /* Tamanho do ícone */
+        }
+
+        .tech-card span {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-align: center;
+        }
         @media (max-width: 768px) {
             .container {
                 padding: 10px;
@@ -232,43 +284,43 @@
         <section class="tech-section">
             <h2>Tecnologias e Ferramentas</h2>
             <div class="tech-grid">
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-python"></i>
                     <span>Python</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-html5"></i>
                     <span>HTML 5</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-css3-alt"></i>
                     <span>CSS 3</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-js"></i>
                     <span>Java Script</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-git-alt"></i>
                     <span>Git</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                 </div>
-                <div class="tech-item">
-                    <i class="fab fa-list-check"></i>
+                <div class="tech-card">
+                    <img src="icons8-sql-60.png" class="custom-icon" alt="SQL">
                     <span>SQL Server/My SQL</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-tasks"></i>
                     <span>Metologias Ágeis</span>
                 </div>
-                <div class="tech-item">
-                    <i class="fab fa-file-word"></i>
+                <div class="tech-card">
+                    <img src="icons8-word-60.png" class="custom-icon" alt="SQL">
                     <span>Pacote Office</span>
                 </div>
-                <div class="tech-item">
+                <div class="tech-card">
                     <i class="fab fa-window-maximize"></i>
                     <span>Tkinter</span>
                 </div>
