@@ -147,21 +147,21 @@
 
 /* Ajuste de tamanho dos ícones */
         .fab, .fas {
-    font-size: 24px; /* Tamanho padrão */
-    }   
+            font-size: 24px; /* Tamanho padrão */
+        }   
 
 /* Cores personalizadas (opcional) */
         .fa-python { color: #3776AB; }
-            .fa-html5 { color: #E34F26; }
+        .fa-html5 { color: #E34F26; }
         .fa-css3-alt { color: #1572B6; }
         .tech-item:hover .fab {
-        transform: scale(1.2);
-        transition: transform 0.3s ease;
+            transform: scale(1.2);
+            transition: transform 0.3s ease;
         }
         .tech-section {
-    padding: 2rem;
-    background-color: #f8f9fa; /* Cor de fundo opcional */
-}
+            padding: 2rem;
+            background-color: #f8f9fa; /* Cor de fundo opcional */
+        }
 
         .tech-grid {
             display: grid;
@@ -196,31 +196,162 @@
             font-weight: 500;
             text-align: center;
         }
+        @media (max-width: 1024px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .profile-section {
+                padding: 30px 20px;
+            }
+            
+            .projects-grid {
+                gap: 20px;
+            }
+        }
         @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .profile-pic {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .about-text {
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+            
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                gap: 1rem;
+            }
+            
+            .tech-card {
+                padding: 1rem;
+            }
+            
+            .tech-card i {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 480px) {
             .container {
                 padding: 10px;
             }
             
             .profile-section {
+                padding: 25px 15px;
                 margin-top: 10px;
-                padding: 30px 15px;
+                border-radius: 10px;
             }
-
+            
             .profile-pic {
-                width: 120px;
-                height: 120px;
+                width: 110px;
+                height: 110px;
             }
-
+            
             h1 {
+                font-size: 1.6rem;
+            }
+            
+            h2 {
+                font-size: 1.3rem;
+                text-align: center;
+            }
+            
+            .about-text {
+                font-size: 0.9rem;
+                padding: 0 10px;
+            }
+            
+            .contact-info p {
+                font-size: 0.85rem;
+            }
+            
+            .projects-grid {
+                gap: 15px;
+            }
+            
+            .project-card {
+                margin: 0;
+                padding: 15px;
+            }
+            
+            .project-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .project-card p {
+                font-size: 0.85rem;
+            }
+            
+            .tech-section {
+                padding: 1rem;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+                gap: 0.8rem;
+            }
+            
+            .tech-card {
+                padding: 0.8rem;
+            }
+            
+            .tech-card i {
                 font-size: 1.8rem;
             }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
+            
+            .tech-card span {
+                font-size: 0.8rem;
             }
+            
+            .github-link {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
 
+        @media (max-width: 360px) {
+            .profile-section {
+                padding: 20px 10px;
+            }
+            
+            .social-links a {
+                margin: 0 8px;
+                font-size: 22px;
+            }
+            
+            .contact-info p {
+                font-size: 0.8rem;
+            }
+            
             .project-card {
-                margin: 0 10px;
+                padding: 12px;
+            }
+        }
+
+        /* Ajuste para imagens de ícones personalizados */
+        .custom-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        @media (max-width: 480px) {
+            .custom-icon {
+                width: 35px;
+                height: 35px;
             }
         }
 
